@@ -6,8 +6,8 @@ import 'package:time_tracker_flutter_course/app/sign_in/social_sign_in_button.da
 
 class SignInPage extends StatelessWidget {
   //const SignInPage({Key? key}) : super(key: key);
-  const SignInPage({super.key, required this.onSignIn});
-  final void Function(User) onSignIn;
+  const SignInPage({Key? key, required this.onSignIn}) : super(key: key);
+  final void Function(User?) onSignIn;
 
 
 
