@@ -14,6 +14,15 @@ class _LandingPageState extends State<LandingPage> {
 
   User? _user;
 
+  //TODO fix code so you can restart app and still be logged in.
+/*  @override
+  void initState() {
+    super.initState();
+    _updateUser(FirebaseAuth.instance.currentUser);
+  }*/
+
+
+
   void _updateUser(User user) {
     setState(() {
       _user = user;
@@ -22,14 +31,16 @@ class _LandingPageState extends State<LandingPage> {
 
   @override
   Widget build(BuildContext context) {
-    if (_user == null)
+    if (_user == null) //_user can never be null, so find another solution.
     {
       return SignInPage(
           onSignIn: (user) => _updateUser(user!),
       );
     }
 
-    return const HomePage(); //temporary home page placeholder.
+    return HomePage(
+      onSignOut: () => _updateUser(_user!), //Fluttercourse: _updateUser(null),
+    );
     //return SignInPage(onSignIn: (user) => _updateUser(user!));
   }
 }
