@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:time_tracker_flutter_course/app/sign_in/email_sign_in_form.dart';
 
 class EmailSignInPage extends StatelessWidget {
   //const EmailSignInPage({Key? key}) : super(key: key);
@@ -10,12 +11,13 @@ class EmailSignInPage extends StatelessWidget {
         title: const Text('Time Tracker'),
         elevation: 2.0,
       ),
-      body: _buildContent(),
+      body: const Padding(
+        padding: EdgeInsets.all(16.0),
+        child: Card(
+            child: EmailSignInForm()
+        ),
+      ),
       backgroundColor: Colors.grey[200],
     );
-  }
-
-  Widget _buildContent() {
-    return Container();
   }
 }
