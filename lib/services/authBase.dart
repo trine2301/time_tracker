@@ -4,4 +4,5 @@ abstract class AuthBase {
   User? get currentUser;
   Future<User?> signInAnonomously();
   Future<void> signOut();
+  Stream<User?> authStateChanges();
 }
