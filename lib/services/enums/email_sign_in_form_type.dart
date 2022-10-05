@@ -1,0 +1,7 @@
+
+
+/*
+enum EmailSignInFormType {
+  signIn,
+  register
+}*/
