@@ -8,10 +8,10 @@ class EmailSignInPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Time Tracker'),
+        title: const Text('Sign in'),
         elevation: 2.0,
       ),
-      body: const Padding(
+      body: Padding(
         padding: EdgeInsets.all(16.0),
         child: Card(
             child: EmailSignInForm()
