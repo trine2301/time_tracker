@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:time_tracker_flutter_course/common_widgets/form_submit_button.dart';
 
 class EmailSignInForm extends StatelessWidget {
   const EmailSignInForm({Key? key}) : super(key: key);
@@ -11,11 +12,22 @@ class EmailSignInForm extends StatelessWidget {
           hintText: 'test@email.com'
         ),
       ),
+      SizedBox(height: 8.0),
       const TextField(
         decoration: InputDecoration(
           labelText: 'Password',
         ),
         obscureText: true,
+      ),
+      SizedBox(height: 8.0),
+      FormSubmitButton(
+        text: 'Sign in',
+        onPressed: () {},
+      ),
+      SizedBox(height: 8.0),
+      TextButton(
+          child: Text('Need an account? Register'),
+        onPressed: () {},
       ),
     ];
   }
@@ -25,6 +37,7 @@ class EmailSignInForm extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         mainAxisSize: MainAxisSize.min,
         children: _buildChildren(),
       ),
