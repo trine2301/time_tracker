@@ -5,7 +5,8 @@ import 'package:time_tracker_flutter_course/app/sign_in/sign_in_page.dart';
 import 'package:time_tracker_flutter_course/services/authBase.dart';
 
 class LandingPage extends StatelessWidget {
-  const LandingPage({Key? key, required this.auth}) : super(key: key);
+  //const LandingPage({Key? key, required this.auth}) : super(key: key);
+  LandingPage({required this.auth});
   final AuthBase auth;
 
 
